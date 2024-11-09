@@ -21,7 +21,7 @@ func NewWeatherHandler(weatherUseCase *usecase.WeatherUseCase, locationUseCase *
 }
 
 func (h *WeatherHandler) GetWeatherByZip(w http.ResponseWriter, r *http.Request) {
-	zipCode := chi.URLParam(r, "cep")
+	zipCode := chi.URLParam(r, "zipCode")
 
 	if len(zipCode) != 8 || zipCode == "" {
 		http.Error(w, "invalid zipcode", http.StatusUnprocessableEntity)

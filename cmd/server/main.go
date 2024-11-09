@@ -25,7 +25,7 @@ func main() {
 	r.Use(middleware.Logger)
 	r.Use(middleware.Recoverer)
 
-	r.Get("/weather/{cep}", weatherHandler.GetWeatherByZip)
+	r.Get("/weather/{zipCode}", weatherHandler.GetWeatherByZip)
 
 	http.ListenAndServe(":8080", r)
 }

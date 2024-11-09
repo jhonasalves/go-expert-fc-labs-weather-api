@@ -17,8 +17,8 @@ func NewLocationUseCase(weatherRepository *infra.WeatherRepository) *LocationUse
 	}
 }
 
-func (uc *LocationUseCase) GetLocation(zip string) (*entity.Location, error) {
-	locationData, err := uc.WeatherRepository.GetLocationByZipCode(zip)
+func (uc *LocationUseCase) GetLocation(zipCode string) (*entity.Location, error) {
+	locationData, err := uc.WeatherRepository.GetLocationByZipCode(zipCode)
 	if err != nil {
 		return nil, fmt.Errorf("could not fetch location data: %v", err)
 	}

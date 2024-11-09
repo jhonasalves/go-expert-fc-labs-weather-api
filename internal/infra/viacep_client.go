@@ -10,8 +10,8 @@ import (
 
 type ViaCepClient struct{}
 
-func (c *ViaCepClient) FetchLocation(zip string) (*entity.Location, error) {
-	url := fmt.Sprintf("https://viacep.com.br/ws/%s/json/", zip)
+func (c *ViaCepClient) FetchLocation(zipCode string) (*entity.Location, error) {
+	url := fmt.Sprintf("https://viacep.com.br/ws/%s/json/", zipCode)
 	resp, err := http.Get(url)
 	if err != nil {
 		return nil, err
