@@ -23,7 +23,5 @@ func (uc *WeatherUseCase) GetWeather(city string) (*entity.Weather, error) {
 		return nil, fmt.Errorf("could not fetch weather data: %v", err)
 	}
 
-	weatherData.Convert()
-
 	return weatherData, nil
 }

@@ -35,9 +35,11 @@ func (c *WeatherAPIClient) FetchWeather(city string) (*entity.Weather, error) {
 		return nil, err
 	}
 
-	return &entity.Weather{
+	weather := &entity.Weather{
 		TempC: apiResp.Current.TempC,
-		TempF: apiResp.Current.TempC*1.8 + 32,
-		TempK: apiResp.Current.TempC + 273.15,
-	}, nil
+	}
+
+	weather.Convert()
+
+	return weather, nil
 }
