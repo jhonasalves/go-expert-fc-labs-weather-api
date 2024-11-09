@@ -50,3 +50,6 @@ O sistema deverá ser publicado no Google Cloud Run.
 - Testes automatizados que demonstrem o funcionamento correto do sistema.
 - Utilize `docker`/`docker-compose` para facilitar a execução e os testes.
 - Deploy realizado no Google Cloud Run (utilizando o *free tier*), com o endereço ativo para acesso público.
+
+### Endereço Cloud Run
+https://go-expert-fc-labs-weather-api-n3pegybiqq-uc.a.run.app/weather/59139610
